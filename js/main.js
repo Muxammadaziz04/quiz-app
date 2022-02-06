@@ -21,13 +21,16 @@ renderQuize(quiz)
 card.addEventListener('click', (event) => {
     let checkRadio = quizList.querySelector('input[type="radio"]:checked')
     if(event.target.dataset.quiz === 'btn' && checkRadio){
-        if(counter === quiz.length) showResult()
+
+        if(checkRadio.dataset.correct === correctAnswer) score += 1
+        console.log(score);
+
+        if(counter === quiz.length) return showResult()
 
         counter++
         title.textContent = null
         quizList.innerHTML = null
         
-        if(checkRadio.dataset.correct === correctAnswer) score += 1
 
         renderQuize(quiz)
     }
