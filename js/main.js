@@ -31,6 +31,9 @@ card.addEventListener('click', (event) => {
 
         renderQuize(quiz)
     }
+    if(event.target.dataset.quiz === 'reload'){
+        location.reload()
+    }
 })
 
 
@@ -75,4 +78,7 @@ function showResult(){
         modalDesc.innerHTML = 'Вы ответили верно меньше чем на половину вопросов &#129299'
         modalScore.textContent = `${score} из ${quiz.length}`
     }
+
+    btn.textContent = 'Начать заново'
+    btn.dataset.quiz = "reload"
 }

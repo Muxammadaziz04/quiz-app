@@ -52,7 +52,7 @@ const quiz = [
     {
         queastion: "Как в JavaScript создать массив?",
         variants:[
-            "var array = new Array( ) или var array = []",
+            "var array = new Array( ) или var array = [ ]",
             "var array = new Array{ } или var new array = [ ]",
             "int new Array( ) или var new Array( )",
             "var array"
