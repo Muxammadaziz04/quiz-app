@@ -8,11 +8,14 @@ let modalTitle = modal.querySelector('h2')
 let modalDesc = modal.querySelector('.answer__status')
 let modalScore = modal.querySelector('.answer__score')
 
+var quiz_number = document.querySelector('.quiz__number')
+
 const template = document.getElementById('template').content;
 
 let score = 0;
 let correctAnswer = null;
 let counter = 1
+
 
 
 renderQuize(quiz)
@@ -23,27 +26,32 @@ card.addEventListener('click', (event) => {
     if(event.target.dataset.quiz === 'btn' && checkRadio){
 
         if(checkRadio.dataset.correct === correctAnswer) score += 1
-        console.log(score);
 
-        if(counter === quiz.length) return showResult()
+        if(counter === quiz.length){
+            quiz_number.textContent = null
+            return showResult() 
+        }
 
         counter++
         title.textContent = null
-        quizList.innerHTML = null
-        
+        quizList.innerHTML = null        
 
         renderQuize(quiz)
+        quiz_number.textContent = `${counter} / ${quiz.length}`
+
     }
+
     if(event.target.dataset.quiz === 'reload'){
         location.reload()
     }
+
 })
 
 
 function renderQuize(arr){
     arr = arr.slice((counter-1), counter)
     title.textContent = arr[0].queastion
-    
+     
     arr[0].variants.forEach((item, index)=> {
         cloneTemplate = document.importNode(template, true);
         cloneTemplate.querySelector('input').dataset.correct = index+1
@@ -68,17 +76,17 @@ function showResult(){
     }
     else if(score > quiz.length/2){
         modalTitle.innerHTML = 'Поздравляем &#128079'
-        modalDesc.innerHTML = 'Вы ответили верно больше чем на половину вопросов &#129299'
+        modalDesc.innerHTML = 'Вы ответили верно больше чем на половину вопросов &#128522'
         modalScore.textContent = `${score} из ${quiz.length}`
     }
     else if(score === quiz.length/2){
-        modalTitle.innerHTML = 'Поздравляем &#128079'
-        modalDesc.innerHTML = 'Вы ответили верно на половину вопросов &#129299'
+        modalTitle.innerHTML = 'Поздравляем'
+        modalDesc.innerHTML = 'Вы ответили верно на половину вопросов &#128578'
         modalScore.textContent = `${score} из ${quiz.length}`
     }
     else if(score < quiz.length/2){
         modalTitle.innerHTML = 'Нужно постараться'
-        modalDesc.innerHTML = 'Вы ответили верно меньше чем на половину вопросов &#129299'
+        modalDesc.innerHTML = 'Вы ответили верно меньше чем на половину вопросов &#129301'
         modalScore.textContent = `${score} из ${quiz.length}`
     }
 

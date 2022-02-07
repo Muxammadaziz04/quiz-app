@@ -14,7 +14,7 @@
     }
     &__list{
         list-style: none;
-        padding: 0 30px 30px;
+        padding: 0 30px 10px;
     }
     &__item{
         width: 100%;
@@ -26,8 +26,9 @@
         align-items: center;
         cursor: pointer;
         transition: all 0.3s;
+        border-radius: 8px;
         &:hover{
-            background-color: rgba(255, 245, 238, 1);
+            background-color: rgb(165, 165, 165);
         }
     }
     &__input{
@@ -57,6 +58,11 @@
         &:hover{
             background-color: #732d91;
         }
+    }
+    &__number{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
 }
 
