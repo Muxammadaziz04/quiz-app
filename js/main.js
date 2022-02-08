@@ -8,7 +8,7 @@ let modalTitle = modal.querySelector('h2')
 let modalDesc = modal.querySelector('.answer__status')
 let modalScore = modal.querySelector('.answer__score')
 
-var quiz_number = document.querySelector('.quiz__number')
+let quiz_number = document.querySelector('.quiz__number')
 
 const template = document.getElementById('template').content;
 
@@ -17,12 +17,12 @@ let correctAnswer = null;
 let counter = 1
 
 
-
 renderQuize(quiz)
 
 
 card.addEventListener('click', (event) => {
     let checkRadio = quizList.querySelector('input[type="radio"]:checked')
+
     if(event.target.dataset.quiz === 'btn' && checkRadio){
 
         if(checkRadio.dataset.correct === correctAnswer) score += 1
@@ -37,8 +37,8 @@ card.addEventListener('click', (event) => {
         quizList.innerHTML = null        
 
         renderQuize(quiz)
-        quiz_number.textContent = `${counter} / ${quiz.length}`
 
+        quiz_number.textContent = `${counter} / ${quiz.length}`
     }
 
     if(event.target.dataset.quiz === 'reload'){
