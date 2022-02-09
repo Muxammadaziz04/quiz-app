@@ -52,9 +52,9 @@ function renderQuize(arr){
     arr = arr.slice((counter-1), counter)
     title.textContent = arr[0].queastion
      
-    arr[0].variants.forEach((item, index)=> {
+    arr[0].variants.forEach((item)=> {
         cloneTemplate = document.importNode(template, true);
-        cloneTemplate.querySelector('input').dataset.correct = index+1
+        cloneTemplate.querySelector('input').dataset.correct = item
 
         cloneTemplate.querySelector('.quiz__span').textContent = item
         quizList.appendChild(cloneTemplate)

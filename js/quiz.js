@@ -7,7 +7,7 @@ const quiz = [
             "прикладное программное обеспечение",
             "можно во всех перечисленных"
         ],
-        correct: "4"
+        correct: "можно во всех перечисленных"
     },
     {
         queastion: "Какая переменная записана неверно?",
@@ -17,7 +17,7 @@ const quiz = [
             "var b = false",
             "var number = 12,5"
         ],
-        correct: "4"
+        correct: "var number = 12,5"
     },
     {
         queastion: "Как объявить функцию в JavaScript?",
@@ -27,7 +27,7 @@ const quiz = [
             "function = MyFunction()",
             "function = New MyFunction()"
         ],
-        correct: "2"
+        correct: "function MyFunction()"
     },
     {
         queastion: " JSON - это...",
@@ -37,7 +37,7 @@ const quiz = [
             "JavaScript Over Network",
             "имя создателя JavaScript"
         ],
-        correct: "1"
+        correct: "JavaScript Object Notation"
     },
     {
         queastion: "Расшифруйте аббревиатуру DOM",
@@ -47,7 +47,7 @@ const quiz = [
             "Document Object Model",
             "Digital Optical Modeling"
         ],
-        correct: "3"
+        correct: "Document Object Model"
     },
     {
         queastion: "Как в JavaScript создать массив?",
@@ -57,7 +57,7 @@ const quiz = [
             "int new Array( ) или var new Array( )",
             "var array"
         ],
-        correct: "1"
+        correct: "var array = new Array( ) или var array = [ ]"
     },
     {
         queastion: "Расшифруйте аббревиатуру API.",
@@ -67,7 +67,7 @@ const quiz = [
             "Academy Provide Infinite",
             "Application Provide Infinite"
         ],
-        correct: "2"
+        correct: "Application Programming Interface"
     },
     {
         queastion: " Какой оператор завершает выполнение текущей функции и возвращает её значение?",
@@ -77,7 +77,7 @@ const quiz = [
             "break",
             "false"
         ],
-        correct: "2"
+        correct: "return"
     },
     {
         queastion: "Можно ли в скрипте перевести посетителя на другую страницу сайта?",
@@ -87,7 +87,7 @@ const quiz = [
             "да, куда угодно",
             "нет правильного ответа"
         ],
-        correct: "3"
+        correct: "да, куда угодно"
     },
     {
         queastion: "Какое из этих ключевых слов ООП не используется в JavaScript?",
@@ -97,6 +97,6 @@ const quiz = [
             "super",
             "все есть"
         ],
-        correct: "3"
+        correct: "super"
     }
 ]
